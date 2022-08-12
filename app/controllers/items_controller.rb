@@ -6,6 +6,12 @@ class ItemsController < ApplicationController
   redirect_to @watchlist
   end
 
+  def destroy
+    @item = @watchlist.items.find(params[:id])
+    @item.destroy
+    redirect_to @watchlist 
+  end
+
   private
 
   def set_watchlist
