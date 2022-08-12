@@ -5,5 +5,12 @@
   <%= @watchlist.list_name %>
 </p>
 
+<div id="items_wrapper">
+  <%= render @watchlist.items %>
+  <div id="form">
+    <%= render "items/form" %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_watchlist_path(@watchlist) %> |
 <%= link_to 'Back', watchlists_path %>
