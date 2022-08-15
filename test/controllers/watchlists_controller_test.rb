@@ -1,4 +1,4 @@
-  require "test_helper"
+require "test_helper"
 
 class WatchlistsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,8 +16,8 @@ class WatchlistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create watchlist" do
-    assert_difference('Watchlist.count') do
-      post watchlists_url, params: { watchlist: { list_name: @watchlist.list_name } }
+    assert_difference("Watchlist.count") do
+      post watchlists_url, params: {watchlist: {list_name: @watchlist.list_name}}
     end
 
     assert_redirected_to watchlist_url(Watchlist.last)
@@ -34,12 +34,12 @@ class WatchlistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update watchlist" do
-    patch watchlist_url(@watchlist), params: { watchlist: { list_name: @watchlist.list_name } }
+    patch watchlist_url(@watchlist), params: {watchlist: {list_name: @watchlist.list_name}}
     assert_redirected_to watchlist_url(@watchlist)
   end
 
   test "should destroy watchlist" do
-    assert_difference('Watchlist.count', -1) do
+    assert_difference("Watchlist.count", -1) do
       delete watchlist_url(@watchlist)
     end
 

@@ -1,5 +1,5 @@
 class WatchlistsController < ApplicationController
-  before_action :set_watchlist, only: %i[ show edit update destroy ]
+  before_action :set_watchlist, only: %i[show edit update destroy]
 
   # GET /watchlists or /watchlists.json
   def index
@@ -58,13 +58,14 @@ class WatchlistsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_watchlist
-      @watchlist = Watchlist.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def watchlist_params
-      params.require(:watchlist).permit(:list_name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_watchlist
+    @watchlist = Watchlist.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def watchlist_params
+    params.require(:watchlist).permit(:list_name)
+  end
 end
