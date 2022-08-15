@@ -1,6 +1,13 @@
-<h1>Editing Watchlist</h1>
+<h1>Edit Watchlist</h1>
 
 <%= render 'form', watchlist: @watchlist %>
+
+<div id="items_wrapper">
+  <%= render @watchlist.items %>
+</div>
+<div id="form">
+    <%= render "items/form" %>
+</div>
 
 <%= link_to 'Show', @watchlist %> |
 <%= link_to 'Back', watchlists_path %>
