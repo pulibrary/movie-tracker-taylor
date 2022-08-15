@@ -1,4 +1,15 @@
 <%= form_for([@watchlist, @watchlist.items.build]) do |f| %>
+  <% if watchlist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(watchlist.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <ul>
+        <% watchlist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
   <%= f.text_field :title, placeholder: "Title" %>
   <%= f.text_field :year, placeholder: "Year" %>
   <%= f.text_field :genre, placeholder: "Genre" %>
