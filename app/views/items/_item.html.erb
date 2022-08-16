@@ -1,0 +1,4 @@
+<p>
+  <%= item.title %> (<%= item.year %>) - <%= item.genre %> 
+  <%= link_to "Delete", watchlist_item_path(@watchlist, item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+</p>
