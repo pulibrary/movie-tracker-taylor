@@ -1,30 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Watchlist, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:watchlist) { Watchlist.new(list_name: 'test_name') }
 
-  subject(:watchlist) { Watchlist.new }
+  it "is valid with valid attributes" do
+    expect(watchlist).to be_valid
+  end
 
-  describe "#" do
-    it "gets index" do
-    end
-
-    it "gets new" do
-    end
-
-    it "creates watchlist" do 
-    end
-
-    it "shows watchlist" do 
-    end
-
-    it "edits watchlist" do 
-    end
-
-    it "updates watchlist" do 
-    end
-
-    it "destroys watchlist" do
-    end
+  it "is not valid without a list_name" do
+    watchlist.list_name = nil
+    expect(watchlist).to_not be_valid
   end
 end

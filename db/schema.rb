@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_12_182719) do
+ActiveRecord::Schema.define(version: 2022_08_16_190710) do
 
   create_table "items", force: :cascade do |t|
     t.string "title"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2022_08_12_182719) do
   end
 
   create_table "watchlists", force: :cascade do |t|
-    t.string "list_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "list_name"
   end
 
   add_foreign_key "items", "watchlists"
