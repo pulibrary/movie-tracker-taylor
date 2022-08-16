@@ -1,7 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Watchlists", type: :request do
-  describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
-  end
+RSpec.describe WatchlistsController, type: :controller do
+  # context "GET /index" do
+  #   it 'returns a success response' do
+  #     get '/index'
+  #     expect(response).to be_success
+  #   end
+  # end
 end
