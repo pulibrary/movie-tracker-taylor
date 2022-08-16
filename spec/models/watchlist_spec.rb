@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Watchlist, type: :model do
-  subject(:watchlist) { Watchlist.new(list_name: 'test_name') }
+  subject(:watchlist) { Watchlist.new(list_name: 'test name') }
 
   it "is valid with valid attributes" do
     expect(watchlist).to be_valid
