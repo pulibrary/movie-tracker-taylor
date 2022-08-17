@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Item, type: :model do
   let(:watchlist) { Watchlist.new(list_name: "test name") }
@@ -12,5 +12,4 @@ RSpec.describe Item, type: :model do
     item.title = nil
     expect(item).to_not be_valid
   end
-  
 end
