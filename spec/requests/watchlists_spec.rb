@@ -1,10 +1,17 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe WatchlistsController, type: :controller do
-  # context "GET /index" do
-  #   it 'returns a success response' do
-  #     get '/index'
-  #     expect(response).to be_success
-  #   end
-  # end
+RSpec.describe "Watchlists", type: :request do
+  describe "GET /index" do
+    it "returns http success" do
+      get "/watchlists#index"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET /show" do
+    it "returns http success" do
+      get "/watchlists#show"
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
