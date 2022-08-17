@@ -5,7 +5,6 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :year
       t.string :genre
       t.references :watchlist, null: false, foreign_key: true
-
       t.timestamps
     end
   end
