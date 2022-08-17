@@ -1,6 +1,6 @@
 body {
   background-color: #d5f4e6;
-  color: #333;
+  color: #034f84;
   margin: 33px; }
 
 body, p, ol, ul, td, field {
@@ -18,16 +18,18 @@ h1 {
   font-size: 40px; }
 
 a {
-  color: #034f84; }
+  color: #588c7e; }
 
 a:hover {
   color: turquoise; }
 
 th {
+  color: #034f84;
   font-size: 24px;
   padding-bottom: 10px; }
 
 td {
+  color: black;
   font-size: 14px;
   padding: 5px; }
 
@@ -37,7 +39,8 @@ div.actions {
 
 input {
   width: 140px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 5px;
   border: 0px;
   border-width: 1px;
@@ -62,15 +65,18 @@ input[type="submit"] {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  margin: 2px;
+  border: 2px solid indianred;
+  border-radius: 5px;
   display: table; }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid indianred;
   padding: 7px 7px 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0; }
+  background-color: #f0f0f0; 
+  color: black }
 
 #error_explanation h2 {
   text-align: left;
@@ -78,7 +84,7 @@ input[type="submit"] {
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px -7px 0;
-  background-color: #c00;
+  background-color: indianred;
   color: #fff; }
 
 #error_explanation ul li {

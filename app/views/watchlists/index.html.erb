@@ -1,27 +1,28 @@
-<p id="notice"><%= notice %></p>
+<h1 id="site_title">Movie Tracker</h1>
 
-<h1>Movie Tracker</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Watchlists</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @watchlists.each do |watchlist| %>
+<div id="table_cont">
+  <table>
+    <thead>
       <tr>
-        <td id="list_name"><%= watchlist.list_name %></td>
-        <td><%= link_to 'Show', watchlist %></td>
-        <td><%= link_to 'Edit', edit_watchlist_path(watchlist) %></td>
-        <td><%= link_to 'Destroy', watchlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Watchlists</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+      <tbody>
+        <% @watchlists.each do |watchlist| %>
+          <tr>
+            <td id="table_list_name"><%= watchlist.list_name %></td>
+            <td><%= link_to 'Show', watchlist %></td>
+            <td><%= link_to 'Edit', edit_watchlist_path(watchlist) %></td>
+            <td><%= link_to 'Destroy', watchlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>
 
 <br>
 
-<%= link_to 'New Watchlist', new_watchlist_path %>
+<%= link_to 'Create New Watchlist', new_watchlist_path %>
+
+<p id="notice"><%= notice %></p>

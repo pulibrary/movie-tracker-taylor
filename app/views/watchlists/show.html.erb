@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h1><%= @watchlist.list_name %></h1>
-</p>
+<h2 id="list_name"><%= @watchlist.list_name %></h2>
 
 <div id="items_wrapper">
   <%= render @watchlist.items %>
