@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   private
 
   def set_watchlist
-    @watchlist = Watchlist.find(params[:watchlist_id])
+    @watchlist = current_user.watchlists.find(params[:watchlist_id])
   end
 
   def item_params
