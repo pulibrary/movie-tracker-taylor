@@ -9,6 +9,16 @@
   border-radius: 5px;
 }
 
+#nav_bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav_bar a {
+  color: #034f84;
+  font-size: 16px;
+}
+
 table {
   padding: 5px;
 }
@@ -26,5 +36,13 @@ th {
 
 #table_list_name {
   color: #333;
+}
+
+#remember_me_cont {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  vertical-align: middle;
+  word-wrap: break-word;
 }
 
