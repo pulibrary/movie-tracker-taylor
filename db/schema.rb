@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2022_08_18_215024) do
     t.index ["item_id"], name: "index_watchlists_on_item_id"
   end
 
+  add_foreign_key "watchlists", "users"
   add_foreign_key "items", "watchlists"
   add_foreign_key "watchlists", "items"
 end
