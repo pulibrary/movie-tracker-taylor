@@ -1,3 +1,23 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#list_name {
+  background-color: white;
+  color: #034f84;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#items_wrapper {
+  background-color: white;
+  min-height: 40px;
+  font-size: 14px;
+  margin: 10px 5px;
+  padding: 5px; 
+  border-radius: 5px;
+}
+
+form {
+  padding: 5px;
+}
+

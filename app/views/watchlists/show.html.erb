@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>List name:</strong>
-  <%= @watchlist.list_name %>
-</p>
+<h2 id="list_name"><%= @watchlist.list_name %></h2>
 
 <div id="items_wrapper">
   <%= render @watchlist.items %>
 </div>
 
-<%= link_to 'Edit', edit_watchlist_path(@watchlist) %> |
+<div id="form">
+    <%= render "items/form" %>
+</div>
+
+<%= link_to 'Edit List Name', edit_watchlist_path(@watchlist) %> |
 <%= link_to 'Back', watchlists_path %>
