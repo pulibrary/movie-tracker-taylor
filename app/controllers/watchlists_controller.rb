@@ -1,6 +1,6 @@
 class WatchlistsController < ApplicationController
   before_action :set_watchlist, only: %i[show edit update destroy]
-  
+
   # GET /watchlists or /watchlists.json
   def index
     @watchlists = current_user.watchlists.all
