@@ -34,7 +34,7 @@ rails s
 - Access the application at http://localhost:3000/
 
 ### Run tests
-- To run tests
+- To run tests:
 ```
 bundle exec rspec
 ```
