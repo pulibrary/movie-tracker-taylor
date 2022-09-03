@@ -31,7 +31,7 @@ bin/rails db:reset
 ```
 rails s
 ```
-- Access the application at http://localhost:3000/
+- Access the application at http://localhost:3000/.
 
 ### Run tests
 - To run tests:
